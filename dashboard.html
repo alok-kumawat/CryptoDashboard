@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-coins"></i> Crypto Dashboard</h1>
+  </header>
+  
+  <main>
+    <section id="market-overview">
+      <h2 class="section-title overview-title">Market Overview</h2>
+      <div id="overview-data">Loading...</div>
+    </section>
+
+    <section id="crypto-list">
+      <h2 class="section-title list-title">Cryptocurrency List</h2>
+      <div id="crypto-cards"></div>
+    </section>
+
+    <section id="crypto-table">
+      <h2 class="section-title table-title">Tabular Data</h2>
+      <table>
+        <thead>
+            <tr>
+                <th><i class="fas fa-coins"></i> Name</th>
+                <th><i class="fas fa-dollar-sign"></i> Price</th>
+                <th><i class="fas fa-chart-line"></i> Market Cap</th>
+                <th><i class="fas fa-percentage"></i> 24h Change</th>
+              </tr>              
+        </thead>
+        <tbody id="crypto-table-body"></tbody>
+      </table>
+    </section>
+
+    <section id="chart-section">
+      <h2 class="section-title chart-title">Price Chart</h2>
+      <select id="coin-select"></select>
+      <canvas id="priceChart" width="600" height="300"></canvas>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
